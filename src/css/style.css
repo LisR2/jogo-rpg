@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(253, 65%, 49%);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+#character-creation label,
+#character-creation input,
+#character-creation select,
+#character-creation button {
+    margin: 10px 0;
+    display: block;
+}
+
+#status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#scene img, #character img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    }
+
+    .character-card {
+        display: none; /* Esconde os personagens por padrão */
+    }
+    
+    .character-card.active {
+        display: block; /* Mostra apenas o personagem ativo */
+    }
+    
+
+    #scene {
+        position: relative; /* Define o cenário como referência para posicionamento */
+        width: 100%;
+        height: 400px; /* Ajuste conforme necessário */
+        background: url('./scr/cenario.png') no-repeat center center;/* Substitua pela imagem do cenário */
+        background-size: cover;
+        border: 2px solid #333;
+        border-radius: 10px;
+        overflow: hidden; /* Garante que nenhum elemento ultrapasse os limites do cenário */
+    }
+    
+    #character {
+        position: absolute; /* Permite posicionar o personagem dentro do cenário */
+        bottom: 10px; /* Ajusta a distância do personagem em relação à parte inferior */
+        left: 10px; /* Ajusta a distância do personagem em relação à parte esquerda */
+        width: 100px; /* Ajuste o tamanho do personagem conforme necessário */
+        z-index: 10; /* Garante que o personagem fique acima do cenário */
+        border: 2px solid white;
+        color: white;
+    }
+    
+    #character img {
+        width: 100%; /* Mantém a imagem proporcional dentro do contêiner */
+        height: auto;
+        border-radius: 5px; /* Adiciona bordas arredondadas, se desejar */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para destaque */
+    }
+    
+    #inimigo{
+        position: absolute; /* Permite posicionar o personagem dentro do cenário */
+        bottom: 10px; /* Ajusta a distância do personagem em relação à parte inferior */
+        right: 10px; /* Ajusta a distância do personagem em relação à parte esquerda */
+        width: 150px; /* Ajuste o tamanho do personagem conforme necessário */
+        z-index: 10; /* Garante que o personagem fique acima do cenário */
+        border: 2px solid white;
+        color: white;
+    }
+
+#log {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    }
+
+    .btn-restart {
+        position: fixed;
+        bottom: 20px; /* Ajuste a posição conforme necessário */
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #ff5733;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+    }
+    
+    .btn-restart:hover {
+        background-color: #e74c3c;
+    }
+    

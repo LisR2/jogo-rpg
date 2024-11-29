@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Salve seu Projeto!</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="game">
+    <header>
+    <h1>RPG - Salve seu Projeto</h1>
+    <p>Você é um desenvolvedor lutando contra bugs para salvar seu projeto.</p>
+    </header>
+
+    <section id="character-creation">
+    <h2>Crie seu Personagem</h2>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" placeholder="Digite seu nome">
+    
+    <label for="class">Classe:</label>
+    <select id="class">
+        <option value="mago">Mago</option>
+        <option value="arqueiro">Arqueiro</option>
+        <option value="guerreiro">Guerreiro</option>
+        <option value="ladino">Ladino</option>
+    </select>
+    
+    <button id="start-game">Iniciar Aventura</button>
+    </section>
+
+    <section id="game-area" class="hidden">
+    <div id="status">
+        <div id="character-status">
+    <p><strong>Nome:</strong> <span id="char-name"></span></p>
+    <p><strong>Classe:</strong> <span id="char-class"></span></p>
+    <p><strong>HP:</strong> <span id="char-hp">100</span></p>
+        </div>
+        <div id="enemy-status">
+    <p><strong>Bug:</strong> <span id="enemy-name">Erro Fatal</span></p>
+    <p><strong>HP:</strong> <span id="enemy-hp">50</span></p>
+        </div>
+    </div>
+    <div id="scene">
+            <img id="scene-img" src="./src/img/cenario.png" alt="Cenário">
+    <div id="character">
+        <div class="character-card" data-class="arqueiro">
+            <img src="src/img/arqueira.png" alt="Personagem arqueira">
+            <p>Arqueira</p>
+        </div>
+        <div class="character-card" data-class="guerreiro">
+            <img src="src/img/guerreiro.png" alt="Personagem guerreiro">
+            <p>Guerreiro</p>
+        </div>
+        <div class="character-card" data-class="ladino">
+            <img src="src/img/ladina.png" alt="Personagem ladina">
+            <p>Ladina</p>
+        </div>
+        <div class="character-card" data-class="mago">
+            <img src="src/img/mago.png" alt="Personagem mago">
+            <p>Mago</p>
+        </div>
+    </div>
+    <div id="inimigo">
+        <img src="./src/img/inimigo.png" alt="inimigo, um bug representado por um inseto verde">
+    </div>
+    </div>
+    
+    <div id="actions">
+        <button onclick="attack()">Atacar</button>
+        <button onclick="defend()">Defender</button>
+        <button onclick="heal()">Curar</button>
+    </div>
+
+    <div id="log">
+        <p>O jogo começou! Enfrente os bugs!</p>
+    </div>
+    </section>
+    </div>
+    <button id="restart-game" class="btn-restart">Reiniciar Jogo</button>
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
